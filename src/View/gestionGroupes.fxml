@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GestionGroupesController">
+   <children>
+      <StackPane layoutX="184.0" layoutY="100.0" prefHeight="550.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Pane prefHeight="185.0" prefWidth="1024.0" style="-fx-background-color: #2196f3;" />
+                  <Pane prefHeight="569.0" prefWidth="1024.0" style="-fx-background-color: #EDE7F6;" />
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="672.0" prefWidth="1024.0" style="-fx-background-color: transparent;">
+               <children>
+                  <VBox layoutX="188.0" layoutY="24.0" prefHeight="82.0" prefWidth="634.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="679.0" text="SCHOOL1.0" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="693.0" text="Page Adminstarteur" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label layoutX="175.0" layoutY="125.0" prefHeight="38.0" prefWidth="278.0" text="Gestion des groupes" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Italic" size="30.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnRetour" layoutX="815.0" layoutY="122.0" onAction="#handleButtonRetour" prefHeight="49.0" prefWidth="154.0" style="-fx-background-color: #ff0000;" text="&lt;- Retour" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <GridPane layoutX="118.0" layoutY="235.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="98.0" prefWidth="809.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="287.66668701171875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="122.33331298828125" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="284.33331298828125" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.3333740234375" minWidth="10.0" prefWidth="111.66668701171875" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="63.33331298828125" minHeight="10.0" prefHeight="44.666656494140625" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="98.33334350585938" minHeight="10.0" prefHeight="94.33334350585938" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="43.0" prefWidth="235.0" text="Création d'un groupe :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="nomGroupe" labelFloat="true" maxHeight="-Infinity" maxWidth="296.0" minHeight="-Infinity" minWidth="95.0" prefHeight="45.0" prefWidth="296.0" promptText="Nom du groupe :" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Roboto Medium" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="creerGroupe" onAction="#handleCreerGroupe" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #2196f3;" text="Creer" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Roboto Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <Label prefHeight="35.0" prefWidth="233.0" text="Nom du groupe à affecter :" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXButton prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #2196f3;" text="Modifier" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Roboto Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <ComboBox fx:id="comboGroupe" prefHeight="31.0" prefWidth="273.0" promptText="Nom du groupe à affecter :" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="120.0" layoutY="337.0" prefHeight="43.0" prefWidth="306.0" text="Ajout des étudiants dans un groupe :">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tabView" layoutX="186.0" layoutY="388.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="687.0">
+                     <columns>
+                        <TableColumn fx:id="tabNom" prefWidth="194.0" text="Nom" />
+                        <TableColumn fx:id="tabPrenom" prefWidth="217.0" text="Prénom" />
+                        <TableColumn fx:id="tabGroupe" prefWidth="244.0" text="Groupe" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

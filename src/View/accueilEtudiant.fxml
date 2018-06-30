@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EtudiantController">
+   <children>
+      <StackPane layoutX="184.0" layoutY="100.0" prefHeight="550.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Pane prefHeight="185.0" prefWidth="1024.0" style="-fx-background-color: #2196f3;" />
+                  <Pane prefHeight="569.0" prefWidth="1024.0" style="-fx-background-color: #EDE7F6;" />
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="672.0" prefWidth="1024.0" style="-fx-background-color: transparent;">
+               <children>
+                  <VBox layoutX="188.0" layoutY="24.0" prefHeight="82.0" prefWidth="634.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="679.0" text="SCHOOL1.0" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="693.0" text="Page Etudiant" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label layoutX="175.0" layoutY="125.0" text="Bonjour" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Italic" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="login" layoutX="295.0" layoutY="125.0" prefHeight="38.0" prefWidth="278.0" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="30.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="buttonRetour" layoutX="815.0" layoutY="126.0" onAction="#handleButtonRetour" prefHeight="49.0" prefWidth="154.0" style="-fx-background-color: #ff0000;" text="se deconnecter" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <TableView fx:id="tabView" layoutX="150.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="155.0" prefWidth="725.0">
+                     <columns>
+                        <TableColumn fx:id="tabNom" prefWidth="170.0" text="Nom" />
+                        <TableColumn fx:id="tabPrenom" prefWidth="185.0" text="Prénom" />
+                        <TableColumn fx:id="tabGroupe" prefWidth="217.0" text="Groupe" />
+                        <TableColumn fx:id="tabEmail" prefWidth="152.0" text="Email" />
+                     </columns>
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                  </TableView>
+                  <Label layoutX="85.0" layoutY="187.0" prefHeight="32.0" prefWidth="284.0" text="Voici les membres de votre groupe :">
+                     <font>
+                        <Font name="Arial Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="411.0" prefHeight="32.0" prefWidth="284.0" text="Voici votre emploi du temps :">
+                     <font>
+                        <Font name="Arial Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tabView2" layoutX="49.0" layoutY="456.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="925.0">
+                     <columns>
+                        <TableColumn fx:id="tabSession" prefWidth="67.0" text="Session" />
+                        <TableColumn fx:id="tabMatiere" prefWidth="155.0" text="Matière" />
+                        <TableColumn fx:id="tabSalle" prefWidth="105.0" text="Salle" />
+                        <TableColumn fx:id="tabDate" prefWidth="119.0" text="Date" />
+                        <TableColumn fx:id="tabDebut" prefWidth="145.0" text="Heure de début" />
+                        <TableColumn fx:id="tabFin" prefWidth="134.0" text="Heure de fin" />
+                        <TableColumn fx:id="tabEnseignant" prefWidth="199.0" text="Enseignant" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

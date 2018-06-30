@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="482.0" style="-fx-background-color: WHITE; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 4; -fx-border-radius: 4; -fx-padding: 8;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTextField fx:id="textId" labelFloat="true" layoutX="27.0" layoutY="186.0" maxWidth="316.0" minWidth="233.0" prefHeight="31.0" prefWidth="316.0" promptText="Nom du groupe">
+         <font>
+            <Font name="Roboto Medium" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="butConn" layoutX="366.0" layoutY="186.0" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #2196f3;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="-2.0" prefHeight="113.0" prefWidth="466.0">
+         <children>
+            <Pane layoutX="2.0" layoutY="-1.0" prefHeight="112.0" prefWidth="483.0" style="-fx-background-color: #2196f3;">
+               <children>
+                  <Label layoutX="10.0" layoutY="44.0" prefHeight="45.0" prefWidth="282.0" text="Creation d'un groupe" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Italic" size="30.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="buttonRetour" layoutX="366.0" layoutY="52.0" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #ff0000;" text="&lt;- Retour" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
